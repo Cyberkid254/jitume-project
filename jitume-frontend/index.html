@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jitume Technical Training Institute</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
+  <style>
+    .dropdown:hover .dropdown-menu {
+      display: block;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .fade-in { animation: fadeIn 0.5s ease-out forwards; }
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #f1f1f1; }
+    ::-webkit-scrollbar-thumb {
+      background: #3b82f6; border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover { background: #2563eb; }
+  </style>
+</head>
+<body class="font-sans bg-gray-50">
+  <!-- Header -->
+  <header class="bg-blue-800 text-white shadow-lg sticky top-0 z-50">
+    <div class="container mx-auto px-4 py-3 flex flex-col md:flex-row justify-between items-center">
+      <div class="flex items-center mb-4 md:mb-0">
+        <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center mr-3">
+          <i class="fas fa-graduation-cap text-blue-800 text-2xl"></i>
+        </div>
+        <h1 class="text-2xl font-bold">Jitume Technical Training Institute</h1>
+      </div>
+      <nav class="w-full md:w-auto">
+        <ul class="flex flex-wrap justify-center space-x-1 md:space-x-4">
+          <li class="dropdown relative px-2 py-1 rounded hover:bg-blue-700 transition">
+            <a href="#">Departments <i class="fas fa-chevron-down ml-1 text-sm"></i></a>
+            <ul class="dropdown-menu absolute left-0 mt-2 w-48 bg-white text-gray-800 shadow-lg rounded-md py-1 hidden z-50">
+              <li><a href="#" class="block px-4 py-2 hover:bg-blue-100">Engineering</a></li>
+              <li><a href="#" class="block px-4 py-2 hover:bg-blue-100">Business Studies</a></li>
+              <li><a href="#" class="block px-4 py-2 hover:bg-blue-100">Information Technology</a></li>
+            </ul>
+          </li>
+          <li class="dropdown relative px-2 py-1 rounded hover:bg-blue-700 transition">
+            <a href="#">Courses <i class="fas fa-chevron-down ml-1 text-sm"></i></a>
+            <ul class="dropdown-menu absolute left-0 mt-2 w-48 bg-white text-gray-800 shadow-lg rounded-md py-1 hidden z-50">
+              <li><a href="#" class="block px-4 py-2 hover:bg-blue-100">Diploma in Electrical</a></li>
+              <li><a href="#" class="block px-4 py-2 hover:bg-blue-100">Certificate in Accounting</a></li>
+              <li><a href="#" class="block px-4 py-2 hover:bg-blue-100">Diploma in Software Dev</a></li>
+            </ul>
+          </li>
+          <li class="dropdown relative px-2 py-1 rounded hover:bg-blue-700 transition">
+            <a href="#">Accommodation <i class="fas fa-chevron-down ml-1 text-sm"></i></a>
+            <ul class="dropdown-menu absolute left-0 mt-2 w-48 bg-white text-gray-800 shadow-lg rounded-md py-1 hidden z-50">
+              <li><a href="#" class="block px-4 py-2 hover:bg-blue-100">On-Campus Hostels</a></li>
+              <li><a href="#" class="block px-4 py-2 hover:bg-blue-100">Off-Campus Housing</a></li>
+              <li><a href="#" class="block px-4 py-2 hover:bg-blue-100">Housing Guidelines</a></li>
+            </ul>
+          </li>
+          <li class="dropdown relative px-2 py-1 rounded hover:bg-blue-700 transition">
+            <a href="#">Intakes <i class="fas fa-chevron-down ml-1 text-sm"></i></a>
+            <ul class="dropdown-menu absolute left-0 mt-2 w-48 bg-white text-gray-800 shadow-lg rounded-md py-1 hidden z-50">
+              <li><a href="#" class="block px-4 py-2 hover:bg-blue-100">January Intake</a></li>
+              <li><a href="#" class="block px-4 py-2 hover:bg-blue-100">May Intake</a></li>
+              <li><a href="#" class="block px-4 py-2 hover:bg-blue-100">September Intake</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Body -->
+  <main class="container mx-auto px-4 py-8 min-h-screen">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-3xl font-bold text-center text-blue-800 mb-8">Student Registration Form</h2>
+      <div class="bg-white rounded-lg shadow-xl p-6 mb-8 fade-in">
+        <form id="registrationForm" class="space-y-6">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label for="firstName" class="block text-sm font-medium text-gray-700 mb-1">First Name</label>
+              <input type="text" id="firstName" required class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+            <div>
+              <label for="lastName" class="block text-sm font-medium text-gray-700 mb-1">Last Name</label>
+              <input type="text" id="lastName" required class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label for="idNumber" class="block text-sm font-medium text-gray-700 mb-1">ID Number</label>
+              <input type="text" id="idNumber" required class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+            <div>
+              <label for="phoneNumber" class="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
+              <input type="tel" id="phoneNumber" required class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+          </div>
+          <div>
+            <label for="comment" class="block text-sm font-medium text-gray-700 mb-1">Comments</label>
+            <textarea id="comment" rows="4" class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+          </div>
+          <div class="flex justify-center">
+            <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-6 rounded-md transition flex items-center">
+              <i class="fas fa-user-plus mr-2"></i> Register Student
+            </button>
+          </div>
+        </form>
+      </div>
+      <div class="bg-white rounded-lg shadow-xl p-6 fade-in">
+        <h3 class="text-xl font-semibold text-blue-800 mb-4">Registered Students</h3>
+        <div class="overflow-x-auto">
+          <table class="min-w-full divide-y divide-gray-200">
+            <thead>
+              <tr>
+                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">ID</th>
+                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Name</th>
+                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">ID Number</th>
+                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Phone</th>
+                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Comments</th>
+                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Actions</th>
+              </tr>
+            </thead>
+            <tbody id="studentTableBody" class="bg-white divide-y divide-gray-200"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Edit Modal -->
+  <div id="editModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50">
+    <div class="bg-white rounded-lg p-6 w-full max-w-md">
+      <div class="flex justify-between items-center mb-4">
+        <h3 class="text-xl font-semibold text-blue-800">Edit Comment</h3>
+        <button id="closeModal" class="text-gray-500 hover:text-gray-700"><i class="fas fa-times"></i></button>
+      </div>
+      <textarea id="editCommentText" rows="4" class="w-full px-4 py-2 border rounded-md mb-4 focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+      <input type="hidden" id="editStudentId">
+      <div class="flex justify-end space-x-3">
+        <button id="cancelEdit" class="px-4 py-2 border rounded-md hover:bg-gray-100">Cancel</button>
+        <button id="saveEdit" class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700">Save Changes</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Success notification -->
+  <div id="successNotification" class="fixed top-4 right-4 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg flex items-center space-x-2 transform translate-x-full transition-transform duration-300 z-50">
+    <i class="fas fa-check-circle"></i>
+    <span id="successMessage">Operation completed successfully!</span>
+  </div>
+
+  <script>
+    async function getAllStudents() {
+      const res = await fetch("http://localhost:4000/api/students");
+      return await res.json();
+    }
+
+    async function renderStudentTable() {
+      const students = await getAllStudents();
+      const tableBody = document.getElementById("studentTableBody");
+      tableBody.innerHTML = "";
+      if (students.length === 0) {
+        tableBody.innerHTML = `
+          <tr><td colspan="6" class="px-6 py-4 text-center text-gray-500">No students registered yet.</td></tr>`;
+        return;
+      }
+      students.forEach(student => {
+        const row = document.createElement("tr");
+        row.innerHTML = `
+          <td class="px-6 py-4">${student._id}</td>
+          <td class="px-6 py-4">${student.firstName} ${student.lastName}</td>
+          <td class="px-6 py-4">${student.idNumber}</td>
+          <td class="px-6 py-4">${student.phoneNumber}</td>
+          <td class="px-6 py-4">${student.comment || 'No comment'}</td>
+          <td class="px-6 py-4 text-right">
+            <button class="edit-comment text-blue-600 mr-3" data-id="${student._id}"><i class="fas fa-edit"></i></button>
+            <button class="delete-student text-red-600" data-id="${student._id}"><i class="fas fa-trash"></i></button>
+          </td>`;
+        tableBody.appendChild(row);
+      });
+
+      document.querySelectorAll(".edit-comment").forEach(btn => {
+        btn.addEventListener("click", () => {
+          const id = btn.dataset.id;
+          const student = students.find(s => s._id === id);
+          document.getElementById("editCommentText").value = student.comment || "";
+          document.getElementById("editStudentId").value = id;
+          document.getElementById("editModal").classList.remove("hidden");
+        });
+      });
+
+      document.querySelectorAll(".delete-student").forEach(btn => {
+        btn.addEventListener("click", async () => {
+          if (confirm("Are you sure?")) {
+            await fetch(`http://localhost:4000/api/students/${btn.dataset.id}`, { method: "DELETE" });
+            renderStudentTable();
+            showSuccess("Deleted successfully!");
+          }
+        });
+      });
+    }
+
+    document.getElementById("registrationForm").addEventListener("submit", async e => {
+      e.preventDefault();
+      const data = {
+        firstName: document.getElementById("firstName").value,
+        lastName: document.getElementById("lastName").value,
+        idNumber: document.getElementById("idNumber").value,
+        phoneNumber: document.getElementById("phoneNumber").value,
+        comment: document.getElementById("comment").value,
+      };
+      await fetch("http://localhost:4000/api/students", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data)
+      });
+      renderStudentTable();
+      e.target.reset();
+      showSuccess("Student added successfully!");
+    });
+
+    document.getElementById("closeModal").addEventListener("click", () => document.getElementById("editModal").classList.add("hidden"));
+    document.getElementById("cancelEdit").addEventListener("click", () => document.getElementById("editModal").classList.add("hidden"));
+    document.getElementById("saveEdit").addEventListener("click", async () => {
+      const id = document.getElementById("editStudentId").value;
+      const comment = document.getElementById("editCommentText").value;
+      await fetch(`http://localhost:4000/api/students/${id}`, {
+        method: "PUT",
+        headers: {"Content-Type":"application/json"},
+        body: JSON.stringify({ comment })
+      });
+      document.getElementById("editModal").classList.add("hidden");
+      renderStudentTable();
+      showSuccess("Comment updated successfully!");
+    });
+
+    function showSuccess(msg) {
+      const n = document.getElementById("successNotification");
+      document.getElementById("successMessage").textContent = msg;
+      n.classList.remove("translate-x-full");
+      n.classList.add("translate-x-0");
+      setTimeout(() => {
+        n.classList.remove("translate-x-0");
+        n.classList.add("translate-x-full");
+      }, 3000);
+    }
+
+    document.addEventListener("DOMContentLoaded", renderStudentTable);
+  </script>
+</body>
+</html>
